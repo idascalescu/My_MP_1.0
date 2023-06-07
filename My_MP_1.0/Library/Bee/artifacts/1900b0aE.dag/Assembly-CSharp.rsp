@@ -351,6 +351,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/GAction.cs"
 "Assets/Scripts/GAgent.cs"
+"Assets/Scripts/goapEnemy.cs"
+"Assets/Scripts/GoToFinnish.cs"
 "Assets/Scripts/GPlanner.cs"
 "Assets/Scripts/GWorld.cs"
 "Assets/Scripts/WorldStates.cs"

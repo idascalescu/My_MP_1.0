@@ -8,7 +8,7 @@ public abstract class GAction : MonoBehaviour
     public string actionName = "Action";
     public float cost = 1.0f;
     public GameObject target;
-    public GameObject targetTag;
+    public string targetTag;
     public float duration;
     public WorldState[] preConditions;
     public WorldState[] afterEffects;
@@ -34,7 +34,7 @@ public abstract class GAction : MonoBehaviour
         {
             foreach(WorldState w in preConditions)
             {
-                preconditions.Add.(w.key, w.value);
+                preconditions.Add(w.key, w.value);
             }
         }
 
@@ -42,7 +42,7 @@ public abstract class GAction : MonoBehaviour
         {
             foreach (WorldState w in afterEffects)
             {
-                effects.Add.(w.key, w.value);
+                effects.Add(w.key, w.value);
             }
         }
     }
@@ -62,8 +62,11 @@ public abstract class GAction : MonoBehaviour
             }
             return true;
         }
+        return true;
     }
+
 
     public abstract bool PrePerform();
     public abstract bool PostPerform();
+    
 }

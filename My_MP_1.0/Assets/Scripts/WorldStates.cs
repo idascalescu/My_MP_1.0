@@ -38,11 +38,22 @@ public class WorldStates
             states.Add(key, value);
     }
 
-    pubcli void RemoveState(string key) 
+    public void RemoveState(string key) 
     {
         if (states.ContainsKey(key))
-            states[key] = value;
-        else
             states.Remove(key);
+    }
+
+    public void SetState(string key, int value)
+    {
+        if(states.ContainsKey(key))
+            states[key] = value;
+        else 
+            states.Add(key, value);
+    }
+    
+    public Dictionary<string, int> GetStates()
+    {
+        return states;
     }
 }

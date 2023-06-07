@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.Xml;
 
 public class Node
 {
@@ -26,12 +27,12 @@ public class GPlanner : MonoBehaviour
         List<GAction> usableActions = new List<GAction>();
         foreach (GAction a in actions) 
         {
-            if(a.IsAchievable())
-                usableActions.Add(a);
+            if(a.isAchievable())
+                usableActions.Add(a);   
         }
 
         List<Node> leaves = new List<Node>();
-        Node start = bew Node(null, 0, GWorld.Instance.GetWorld().GetStates(), null);
+        Node start = new Node(null, 0, GWorld.Instance.GetWorld().GetStates(), null);
 
         bool succes = BuildGraph(start, leaves, usableActions, goal);
         if(!succes)
@@ -76,7 +77,62 @@ public class GPlanner : MonoBehaviour
         {
             Debug.Log("Q: " + a.actionName);
         }
-
         return queue;
    }
+
+    private bool BuildGraph(Node parent, List<Node> leaves, List<GAction> usableActions, Dictionary<string, int > goal)
+    {
+        bool foundPath = false;
+        foreach(GAction action in usableActions) 
+        {
+            if(action.isAchievableGiven(parent.state))
+            {
+                Dictionary<string, int> currentState = new Dictionary<string, int>(parent.state);
+                foreach(KeyValuePair<string, int>eff in action.effects)
+                {
+                    if(!currentState.ContainsKey(eff.Key))
+                    {
+                        currentState.Add(eff.Key, eff.Value);
+                    }
+                }
+
+                Node node = new Node(parent, parent.cost + action.cost, currentState, action);
+
+                if(GoalAchieved(goal, currentState))
+                {
+                    leaves.Add(node);
+                    foundPath = true;
+                }
+                else
+                {
+                    List<GAction> subset = ActionSubset(usableActions, action);
+                    bool found = BuildGraph(node, leaves, subset, goal);
+                    if (found)
+                        foundPath = true;
+                }
+            }
+        }
+        return foundPath;
+    }
+
+    private bool GoalAchieved(Dictionary<string, int> goal, Dictionary<string, int> state)
+    {
+        foreach (KeyValuePair<string, int> g in goal)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    private List<GAction> ActionSubset(List<GAction> actions, GAction removeMe)
+    {
+        List<GAction> subset = new List<GAction>();
+        foreach (GAction a in actions) 
+        {
+            if(!a.Equals(removeMe))
+                subset.Add(a);
+        }
+        return subset;
+    }
 }
