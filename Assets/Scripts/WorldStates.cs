@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class WorldState
+public class WorldState//To be used later for dictionaries.
 {
     public string key;
     public int value;
 }
 public class WorldStates
 {
-    public Dictionary<string, int> states;
-    public WorldStates()
+    public Dictionary<string, int> states;//This will hold the states of the world.
+    public WorldStates()//STATES CONSTRUCTOR
     {
-        states = new Dictionary<string, int> ();
+        states = new Dictionary<string, int> ();//SET UP FOR DICTIONARY
     }
 
+    //++++++++++++++++++++++++++++++++++++++++++
+    //Methods that use and modify the Dictionary.
     public bool HasState(string key)
     {
         return states.ContainsKey(key);
@@ -25,7 +27,7 @@ public class WorldStates
     {
         states.Add(key, value);
     }
-
+    
     public void ModifyState(string key, int value)
     {
         if (states.ContainsKey(key))
@@ -51,8 +53,9 @@ public class WorldStates
         else 
             states.Add(key, value);
     }
-    
-    public Dictionary<string, int> GetStates()
+    //++++++++++++++++++++++++++++++++++++++++++
+
+    public Dictionary<string, int> GetStates()//Returns all of the states / The Dictionary
     {
         return states;
     }

@@ -119,6 +119,8 @@ public class GPlanner : MonoBehaviour
     {
         foreach (KeyValuePair<string, int> g in goal)
         {
+            if (!state.ContainsKey(g.Key))
+
             return false;
         }
 
