@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System.Xml;
+using System;
 
 public class Node
 {
@@ -17,6 +18,11 @@ public class Node
         this.cost = cost;
         this.state = new Dictionary<string, int>(allstates);
         this.action = action;
+    }
+
+    public static implicit operator Node(TaskPatrol v)
+    {
+        throw new NotImplementedException();
     }
 }
 

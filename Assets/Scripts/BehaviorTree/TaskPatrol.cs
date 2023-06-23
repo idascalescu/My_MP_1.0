@@ -42,7 +42,7 @@ public class TaskPatrol : BTNode
             }
             else
             {
-                _transform.position = Vector3.MoveTowards(_transform.position, wp.position, BTEnemyBT.speed * Time.deltaTime);
+                _transform.position = Vector3.MoveTowards(_transform.position, wp.position, BehhaviorTreeEnm.speed * Time.deltaTime);
             }
         }
 

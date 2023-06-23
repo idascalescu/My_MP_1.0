@@ -6,7 +6,8 @@ namespace BehaviorTree
 {
     public abstract class Tree : MonoBehaviour
     {
-        private BTNode _root = null;
+        public BTNode _root = null;//Changed _root into public 
+                                  //so can be accesed from BehaviorTreeEnm
 
         protected void Start()
         {
@@ -24,3 +25,5 @@ namespace BehaviorTree
         protected abstract BTNode SetupTree();
     }
 }
+// https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1729?f1url=%3FappId%3Droslyn%26k%3Dk(CS1729)
+// FOR DEBUGGING

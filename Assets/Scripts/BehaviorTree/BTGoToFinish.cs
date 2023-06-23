@@ -18,7 +18,7 @@ public class BTGoToFinish : BTNode
         if (Vector3.Distance(_transform.position, target.position) > 0.01f)
         {
             _transform.position = Vector3.MoveTowards(
-            _transform.position, target.position, BTEnemyBT.speed + Time.deltaTime);
+            _transform.position, target.position, BehhaviorTreeEnm.speed + Time.deltaTime);
         }
 
         state = NodeState.WALKING;

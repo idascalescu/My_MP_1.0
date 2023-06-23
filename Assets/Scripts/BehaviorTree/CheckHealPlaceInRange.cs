@@ -20,7 +20,7 @@ public class CheckHealPlaceInRange : BTNode
         if (t == null)
         {
             Collider[] _colliders = Physics.OverlapSphere(
-                _transform.position, BTEnemyBT.fovRange, _enemyLayerMask);
+                _transform.position, BehhaviorTreeEnm.fovRange, _enemyLayerMask);
 
             if (_colliders.Length > 0)
             {
