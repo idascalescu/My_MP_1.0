@@ -48,7 +48,7 @@ public class Tower1 : MonoBehaviour
         if (target == null)
             return;
 
-        Vector3 oneDirection = target.position - transform.position;
+        Vector3 oneDirection = target.position - transform.position;//Tower head rotation
         Quaternion lookRotation = Quaternion.LookRotation(oneDirection);
         Vector3 qRotation = lookRotation.eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0.0f, qRotation.y, 0.0f);
