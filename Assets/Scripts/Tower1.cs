@@ -7,9 +7,11 @@ public class Tower1 : MonoBehaviour
 {
     [SerializeField]
     private Transform target;
+    [SerializeField]
+    private float towerOffsetRot;
 
     public float towerRange = 21.0f;
-
+   
     public string enemyTag = "Enemy";
     public Transform partToRotate;
 
@@ -47,11 +49,11 @@ public class Tower1 : MonoBehaviour
     {
         if (target == null)
             return;
-
-        Vector3 oneDirection = target.position - transform.position;//Tower head rotation
+        //TOWER ROT
+        Vector3 oneDirection = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(oneDirection);
         Vector3 qRotation = lookRotation.eulerAngles;
-        partToRotate.rotation = Quaternion.Euler(0.0f, qRotation.y, 0.0f);
+        partToRotate.rotation = Quaternion.Euler(0.0f, qRotation.y - towerOffsetRot, 0.0f);
     }
 
     void OnDrawGizmosSelected()

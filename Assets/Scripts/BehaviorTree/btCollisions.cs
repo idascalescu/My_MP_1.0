@@ -10,7 +10,6 @@ public class btCollisions : MonoBehaviour
     {
         if(collision.gameObject.tag == "Finish")
         {
-            Debug.Log("You've got KNOCKED !!! PROTECT YOUR TEMPLE !!!");
             gM.TakeDamage(1);
         }
     }*/

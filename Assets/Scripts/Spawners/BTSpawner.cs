@@ -23,21 +23,21 @@ public class BTSpawner
     private float sHeightSpawning;
 
     void Start()
-    {
+    {    
         StartCoroutine(Spawn());
     }
     IEnumerator Spawn()
     {
-        while (true) 
-        {
-            
-            Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
+        Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
             heightSpawning, sHeightSpawning);
-            Instantiate(enm, spawningPos, Quaternion.identity);
 
+        for (var i = 0; i < 9; i++)
+        {
+            Instantiate(enm, spawningPos, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
-            yield break;//Togle this for simplify enemies instantiations
         }
+
+        yield break;   //Toggle this to simplify enemies instantiations
     }
 }
 //A TOKEN TO MY IONCOMPETENCE !!!

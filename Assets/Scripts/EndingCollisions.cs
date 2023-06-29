@@ -1,19 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndingCollisions : MonoBehaviour
 {
-    GameManager gameManager;
+    public int maxHP = 0;
+    public int currentHP;
+
+    public HealthBar healthBar;
+
+    void Start()
+    {
+        currentHP = maxHP;
+        healthBar.SetMaxHealth(maxHP);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Enemy")
         {
             Debug.Log("BT Reached finnish");
+            TakeDamage(10);
             Destroy(collision.gameObject);
-            gameManager.TakeDamage(1);
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        
+        currentHP -= 10;
+        healthBar.SetHealth(currentHP);
+        Debug.Log("asd");
+    }
 }
+//https://www.youtube.com/watch?v=BLfNP4Sc_iA tutorial for HP bar 
