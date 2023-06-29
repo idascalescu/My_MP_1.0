@@ -6,7 +6,7 @@ namespace BehaviorTree
 {
     public abstract class Tree : MonoBehaviour
     {
-        public BTNode _root = null;//Changed _root into public 
+        public BTNode _root = null;//Changed _root into public
                                   //so can be accesed from BehaviorTreeEnm
 
         protected void Start()

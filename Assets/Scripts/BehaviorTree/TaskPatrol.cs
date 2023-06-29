@@ -32,17 +32,21 @@ public class TaskPatrol : BTNode
         else
         {
             Transform wp = _waypoints[_currentWaypointIndex];
-            if(Vector3.Distance(_transform.position, wp.position) < 0.8f)
+            if(Vector3.Distance(_transform.position, 
+                wp.position) < 0.8f)
             {
                 _transform.position = wp.position;
                 _waitCounter = 0.0f;
                 _waiting = true;
 
-                _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
+                _currentWaypointIndex = (_currentWaypointIndex + 1) % 
+                    _waypoints.Length;
             }
             else
             {
-                _transform.position = Vector3.MoveTowards(_transform.position, wp.position, BehhaviorTreeEnm.speed * Time.deltaTime);
+                _transform.position = Vector3.MoveTowards
+                    (_transform.position, wp.position, 
+                    BehhaviorTreeEnm.speed * Time.deltaTime);
             }
         }
 

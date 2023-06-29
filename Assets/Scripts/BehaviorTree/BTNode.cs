@@ -19,7 +19,9 @@ namespace BehaviorTree
         public BTNode parent;
         protected List<BTNode> children = new List<BTNode>();
 
-        private Dictionary<string, object> _dataContext = new Dictionary<string, object>();
+        private Dictionary<string, 
+            object> _dataContext = 
+            new Dictionary<string, object>();
 
         public BTNode()
         {

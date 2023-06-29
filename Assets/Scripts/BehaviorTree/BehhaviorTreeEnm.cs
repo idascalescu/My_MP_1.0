@@ -11,7 +11,7 @@ public class BehhaviorTreeEnm : Tree
     protected override BTNode SetupTree()
                                          // USED _root instead of
                                         //simple "root" from
-                                        //the tutorial
+                                       //the tutorial
     {
         _root = new TaskPatrol(transform, btWaypoints);
         return
