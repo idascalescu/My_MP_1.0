@@ -36,7 +36,7 @@ public class BTSpawner
             Instantiate(enm, spawningPos, Quaternion.identity);
 
             yield return new WaitForSeconds(spawningRate);
-           /*yield break;*/   
+            yield break;//Togle this for simplify enemies instantiations
         }
     }
 }

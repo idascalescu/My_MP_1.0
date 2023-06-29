@@ -9,7 +9,7 @@ public class EndingCollisions : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "BTPrefab")
+        if(collision.gameObject.tag == "Enemy")
         {
             Debug.Log("BT Reached finnish");
             Destroy(collision.gameObject);
