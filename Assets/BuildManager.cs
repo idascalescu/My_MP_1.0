@@ -17,16 +17,19 @@ public class BuildManager : MonoBehaviour
 
     [SerializeField]
     public GameObject stdTowerPrefab;
+    [SerializeField]
+    public GameObject anotherTowerPrefab;
 
-    private void Start()
-    {
-        towerToBuild = stdTowerPrefab;
-    }
-
-    private GameObject towerToBuild;
+    [SerializeField]
+    public GameObject towerToBuild;
 
     public GameObject GetTowerToBuild()
     {
         return towerToBuild;
+    }
+
+    public void SetTowerToBuild(GameObject tower)
+    {
+        towerToBuild = tower;
     }
 }

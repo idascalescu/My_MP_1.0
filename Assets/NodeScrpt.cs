@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class NodeScrpt : MonoBehaviour
 {
@@ -11,23 +12,33 @@ public class NodeScrpt : MonoBehaviour
     private Renderer myRend;
     private Color startColor;
 
+    BuildManager buildManager;
+
     private void Start()
     {
          myRend = GetComponent<Renderer>();
         startColor = myRend.material.color;
+        buildManager = BuildManager.instance;
     }
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (buildManager.GetTowerToBuild() == null)
+        {
+            return;
+        }
+
         if(tower  != null) 
         {
-            Debug.Log("Can't build in ther yo...");
+            Debug.Log("Can't build in there yo...");
             return;
         }
 
         //build the tower
-        GameObject towerToBuild = BuildManager.instance.
-            GetTowerToBuild();
+        GameObject towerToBuild = buildManager.GetTowerToBuild();
         tower = (GameObject)Instantiate(towerToBuild, 
             transform.position + new Vector3(0.0f, 0.8f, 0.0f), 
             transform.rotation);
@@ -36,6 +47,12 @@ public class NodeScrpt : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+        if (buildManager.GetTowerToBuild() == null)
+        {
+            return;
+        }
         myRend.material.color = hoverColor;
     }
 
