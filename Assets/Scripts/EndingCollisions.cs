@@ -22,7 +22,7 @@ public class EndingCollisions : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             Debug.Log("BT Reached finnish");
-            TakeDamage(10);
+            TakeDamage(1);
             Destroy(collision.gameObject);
         }
     }

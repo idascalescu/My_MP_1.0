@@ -28,3 +28,4 @@ public class BTGoToFinish : BTNode
     }
 }
 //https://www.youtube.com/watch?v=aR6wt5BlE-E&t=629s YOU IDIOT THIS IS FOR BT BT BT !!!!! 
+// To implement enemy attacking soon !!!!!!!!!!!!!!

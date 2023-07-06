@@ -31,7 +31,7 @@ public class BTSpawner
         Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
             heightSpawning, sHeightSpawning);
 
-        for (var i = 0; i < 10; i++)
+        for (var i = 0; i < 10; i++)//Made this in a basic loop so it will yeild return x 10 times 
         {
             Instantiate(enm, spawningPos, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
