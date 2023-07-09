@@ -412,7 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
-  healthBarBT: {fileID: 4121667728893050233}
+  healthBarBT: {fileID: 0}
 --- !u!1 &94869505277049964
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,9 +795,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8764213761601592521}
   m_Direction: 1
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -814,6 +814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 3734094389103175022}
+  fill: {fileID: 0}
 --- !u!1 &7205190862653853585
 GameObject:
   m_ObjectHideFlags: 0

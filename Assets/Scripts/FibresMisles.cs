@@ -6,7 +6,7 @@ public class FibresMisles : MonoBehaviour
     [SerializeField]
     private Transform target;
 
-    public float speed = 69.0f;
+    public float speed = 50.0f;
 
     public void Seek(Transform _target)
     {

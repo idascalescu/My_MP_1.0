@@ -21,7 +21,6 @@ public class EndingCollisions : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("BT Reached finnish");
             TakeDamage(1);
             Destroy(collision.gameObject);
         }
@@ -32,7 +31,6 @@ public class EndingCollisions : MonoBehaviour
         
         currentHP -= 10;
         healthBar.SetHealth(currentHP);
-        Debug.Log("asd");
     }
 }
 //https://www.youtube.com/watch?v=BLfNP4Sc_iA tutorial for HP bar 

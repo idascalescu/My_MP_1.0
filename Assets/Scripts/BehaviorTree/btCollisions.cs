@@ -1,52 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BTCollisions : MonoBehaviour
 {
-    [SerializeField]
-    float health = 0.0f;
-    [SerializeField]
-    float maxHealth = 10.0f;
+    public int health;
+    public int maxHealth;
 
-    [SerializeField]
-    HealthBarBT healthBarBT;
-
-    private void Awake()
-    {
-        healthBarBT = GetComponentInChildren<HealthBarBT>();
-        
-    }
+    public HealthBarBT healthBarBT;
 
     private void Start()
     {
-        healthBarBT.UpdateHealthBar(health, maxHealth);
-        Debug.Log("bar has been updated ... ");
         health = maxHealth;
+        healthBarBT.SetMaxHealthBT(maxHealth);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            Debug.Log("BT got hit");
-            BTTakeDamage(1.0f);
+            BTTakeDamage(20);
             Destroy(collision.gameObject);
         }
     }
 
-    public void BTTakeDamage(float damageAmount)
+    public void BTTakeDamage(int damageAmount)
     {
-        healthBarBT.UpdateHealthBar(health, maxHealth);
-        
         health -= damageAmount;
-        if(health <= 0)
+        healthBarBT.SetHealthBT(health);
+        if (health <= 0)
         {
-            GetDistroyed();
+            GetDestroyed();
         }
     }
 
-    private void GetDistroyed()
+    public void GetDestroyed()
     {
         Destroy(gameObject);
     }

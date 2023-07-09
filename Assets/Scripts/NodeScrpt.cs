@@ -33,7 +33,6 @@ public class NodeScrpt : MonoBehaviour
 
         if(tower  != null) 
         {
-            Debug.Log("Can't build in there yo...");
             return;
         }
 
