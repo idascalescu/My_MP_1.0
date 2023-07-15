@@ -495,7 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6131597092302855528}
   m_Layer: 0
-  m_Name: BTEnmPrefab3Updated
+  m_Name: Sodium Metabisulphite
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

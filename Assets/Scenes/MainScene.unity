@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44802725, g: 0.49389714, b: 0.55326146, a: 1}
+  m_IndirectSpecularColor: {r: 0.42129394, g: 0.4512161, b: 0.47178435, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2741,14 +2741,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.15682758, y: -0.13799487, z: -0.007562043, w: 0.9779087}
+  m_LocalRotation: {x: 0.055128917, y: -0.14263715, z: -0.022738896, w: 0.98797697}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 17.736, y: -16.61, z: -3.496}
+  m_LocalEulerAnglesHint: {x: 5.88, y: -16.61, z: -3.496}
 --- !u!4 &706908432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5181145832385202615, guid: 899ac1f659d127c448a8422a1739fdcf, type: 3}
@@ -6515,7 +6515,7 @@ GameObject:
   - component: {fileID: 1842397688}
   - component: {fileID: 1842397689}
   m_Layer: 0
-  m_Name: BTSpawner
+  m_Name: BT Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6549,6 +6549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enm: {fileID: 6131597092302855535, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
+  enm2: {fileID: 6131597092302855535, guid: 3cebd3509354b2247941e04bc161adfc, type: 3}
   spawningRate: 6
   SpawningPoint: {fileID: 1842397688}
   heightSpawning: -5
