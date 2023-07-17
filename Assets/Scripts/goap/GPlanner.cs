@@ -20,20 +20,20 @@ public class Node
         this.action = action;
     }
 
-    public static implicit operator Node(TaskPatrol v)
+ /*   public static implicit operator Node(TaskPatrol v)
     {
         throw new NotImplementedException();
-    }
+    }*/
 }
 
-public class GPlanner : MonoBehaviour
+public class GPlanner 
 {
-   public Queue<GAction> Plan(List<GAction> actions, Dictionary<string, int> goal, WorldStates states)
+   public Queue<GAction> plan(List<GAction> actions, Dictionary<string, int> goal, WorldStates states)
    {
        List <GAction> usableActions = new List<GAction>();
         foreach (GAction a in actions) 
         {
-            if(a.isAchievable())
+            if(a.IsAchievable())
                 usableActions.Add(a);   
         }
 
@@ -91,7 +91,7 @@ public class GPlanner : MonoBehaviour
         bool foundPath = false;
         foreach(GAction action in usableActions) 
         {
-            if(action.isAchievableGiven(parent.state))
+            if(action.IsAchievableGiven(parent.state))
             {
                 Dictionary<string, int> currentState = new Dictionary<string, int>(parent.state);
                 foreach(KeyValuePair<string, int>eff in action.effects)

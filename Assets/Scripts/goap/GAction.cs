@@ -28,7 +28,7 @@ public abstract class GAction : MonoBehaviour
 
     public bool running = false;//Set up the actions
 
-    public GAction()
+    public GAction()//Constructor
     {
         preconditions = new Dictionary<string, int>();
         effects = new Dictionary<string, int>();
@@ -38,7 +38,7 @@ public abstract class GAction : MonoBehaviour
     {
         agent = this.gameObject.GetComponent<NavMeshAgent>();
 
-        if(preConditions != null) 
+        if(preConditions != null) //if if something in those "pre-conditions" we'll start looking into it
         {
             foreach(WorldState w in preConditions)
             {
@@ -55,14 +55,14 @@ public abstract class GAction : MonoBehaviour
         }
     }
 
-    public bool isAchievable()
+    public bool IsAchievable()//Determines if the goal can be acheived
     {
         return true;
     }
 
-    public bool isAchievableGiven(Dictionary<string, int> conditions)
+    public bool IsAchievableGiven(Dictionary<string, int> conditions)
     {
-        foreach (KeyValuePair<string, int> p in preconditions)
+        foreach (KeyValuePair<string, int> p in preconditions)// looking for pre-conditions that match 
         {
             if (!conditions.ContainsKey(p.Key))
             {

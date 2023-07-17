@@ -53,7 +53,7 @@ public class WorldStates
         else 
             states.Add(key, value);
     }
-    //++++++++++++++++++++++++++++++++++++++++++
+    //++++++++++++++++++++++++++++++++++++++++++***********************
 
     public Dictionary<string, int> GetStates()//Returns all of the states / The Dictionary
     {

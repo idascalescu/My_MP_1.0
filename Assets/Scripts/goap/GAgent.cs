@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
+using System.Linq;//This will help to sort the goals
 
 public class SubGoal
 {
-    public Dictionary<string, int> sgoals;
+    public Dictionary<string, int> sgoals;//*Structure kept for consistency*
     public bool remove;
 
     public SubGoal(string s, int i, bool r)
@@ -39,7 +39,7 @@ public class GAgent : MonoBehaviour
     void CompleteAction()
     {
         currentAction.running = false;
-        currentAction.PrePerform();
+        currentAction.PostPerform();
         invoked = false;
     }
 
@@ -60,14 +60,14 @@ public class GAgent : MonoBehaviour
 
         if(planner == null || actionQueue == null)
         {
-            /*planner = new GPlanner();*/
-            planner = this.GetComponent<GPlanner>();
+            planner = new GPlanner();
+            /*planner = this.GetComponent<GPlanner>();*/
 
             var sortedGoals = from entry in goals orderby entry.Value descending select entry;
             foreach(KeyValuePair<SubGoal, int> sg in sortedGoals)
             {
-                /*actionQueue = planner.Plan(actions, sg.Key.sgoals, null);*/
-                if(actionQueue != null) 
+                actionQueue = planner.plan(actions, sg.Key.sgoals, null);
+                if (actionQueue != null) 
                 {
                     currentGoal = sg.Key;
                     break;
@@ -87,7 +87,7 @@ public class GAgent : MonoBehaviour
         if(actionQueue != null && actionQueue.Count > 0) 
         {
             currentAction = actionQueue.Dequeue();
-            if(currentAction.PostPerform())
+            if(currentAction.PrePerform())
             {
                 if(currentAction.target == null && currentAction.targetTag != "")
                 {
