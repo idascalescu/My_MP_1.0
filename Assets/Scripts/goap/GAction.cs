@@ -36,6 +36,7 @@ public abstract class GAction : MonoBehaviour
 
     public void Awake()
     {
+        target = GameObject.FindGameObjectWithTag("Finish");//Added this in awake to fix the spawner issues
         agent = this.gameObject.GetComponent<NavMeshAgent>();
 
         if(preConditions != null) //if if something in those "pre-conditions" we'll start looking into it
