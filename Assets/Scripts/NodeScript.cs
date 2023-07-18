@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class NodeScript : MonoBehaviour
 {
     public Color hoverColor;
+    public Color toLessMoneyColor;
     public Vector3 posOffSet;
 
     [Header("Optional")]
@@ -53,11 +54,19 @@ public class NodeScript : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
+
         if (!buildManager.CanBuild)
         {
             return;
         }
-        myRend.material.color = hoverColor;
+        if (buildManager.PlayerHasMoney)
+        {
+            myRend.material.color = hoverColor;
+        }
+        else
+        {
+            myRend.material.color = toLessMoneyColor;
+        }
     } // HIGH PRIORITY
 
     private void OnMouseExit()

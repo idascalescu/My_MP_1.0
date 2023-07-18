@@ -23,6 +23,7 @@ public class BuildManager : MonoBehaviour
     private TowerBluePrint towerToBuild;
 
     public bool CanBuild { get { return towerToBuild != null; } }
+    public bool PlayerHasMoney { get { return PStats.money >= towerToBuild.cost; } }
 
     public void BuiltTowerOn(NodeScript node)
     {
