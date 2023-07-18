@@ -26,7 +26,7 @@ public class BTSpawner
     [SerializeField]
     private float sHeightSpawning;
 
-    private bool firstWaveSpawned;
+   /* private bool firstWaveSpawned;*///FOR SPAWNING WAVES
 
     void Start()
     {
@@ -51,7 +51,6 @@ public class BTSpawner
         {
             Instantiate(enm, spawningPos, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
-            firstWaveSpawned = true;
         }
         
         yield break;//Toggle this to simplify enemies instantiations

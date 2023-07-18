@@ -20,16 +20,28 @@ public class BuildManager : MonoBehaviour
     [SerializeField]
     public GameObject anotherTowerPrefab;
 
-    [SerializeField]
-    public GameObject towerToBuild;
+    private TowerBluePrint towerToBuild;
 
-    public GameObject GetTowerToBuild()
+    public bool CanBuild { get { return towerToBuild != null; } }
+
+    public void BuiltTowerOn(NodeScript node)
     {
-        return towerToBuild;
+        if(PStats.money < towerToBuild.cost)
+        {
+            Debug.Log("Not enough money to build yo");
+            return;
+        }
+
+        PStats.money -= towerToBuild.cost;
+
+        GameObject tower = Instantiate(towerToBuild.tPrefab, node.GetBuildPos(), Quaternion.identity);
+        node.tower = tower;
+
+        Debug.Log("Tower built ! Money left:" + PStats.money);
     }
 
-    public void SetTowerToBuild(GameObject tower)
+    public void SelectTowerToBuild(TowerBluePrint tower)
     {
-        towerToBuild = tower;
+        towerToBuild = tower; //MUST BE FIXED TOMORROW THE LATEST !!! 18/07
     }
 }

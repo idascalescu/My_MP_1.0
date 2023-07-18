@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class NodeScrpt : MonoBehaviour
+public class NodeScript : MonoBehaviour
 {
     public Color hoverColor;
+    public Vector3 posOffSet;
 
-    private GameObject tower;
+    [Header("Optional")]
+    public GameObject tower;
 
     private Renderer myRend;
     private Color startColor;
@@ -19,6 +21,12 @@ public class NodeScrpt : MonoBehaviour
          myRend = GetComponent<Renderer>();
         startColor = myRend.material.color;
         buildManager = BuildManager.instance;
+        posOffSet = new Vector3(0.0f, .8f, 0.0f);
+    }
+
+    public Vector3 GetBuildPos()
+    {
+        return transform.position + posOffSet;
     }
 
     private void OnMouseDown()
@@ -26,34 +34,31 @@ public class NodeScrpt : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (buildManager.GetTowerToBuild() == null)
+        if (!buildManager.CanBuild)
         {
             return;
         }
 
-        if(tower  != null) 
+        if (tower != null)
         {
             return;
         }
 
         //build the tower
-        GameObject towerToBuild = buildManager.GetTowerToBuild();
-        tower = (GameObject)Instantiate(towerToBuild, 
-            transform.position + new Vector3(0.0f, 0.8f, 0.0f), 
-            transform.rotation);
+        buildManager.BuiltTowerOn(this);
 
-    }
+    } //MUST BE FIXED TOMORROW THE LATEST HIGH PRIORITY
 
     private void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-        if (buildManager.GetTowerToBuild() == null)
+        if (!buildManager.CanBuild)
         {
             return;
         }
         myRend.material.color = hoverColor;
-    }
+    } // HIGH PRIORITY
 
     private void OnMouseExit()
     {
