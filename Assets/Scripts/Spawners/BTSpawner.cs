@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.UI;
 
 public class BTSpawner
     : MonoBehaviour
@@ -25,6 +26,8 @@ public class BTSpawner
 
     [SerializeField]
     private float sHeightSpawning;
+
+    public GameManager gameManager;
 
    /* private bool firstWaveSpawned;*///FOR SPAWNING WAVES
 
