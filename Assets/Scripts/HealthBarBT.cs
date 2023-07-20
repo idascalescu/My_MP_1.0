@@ -13,7 +13,7 @@ public class HealthBarBT : MonoBehaviour
         slider.value = currentValue / maxValue;
     }*/
     // Implemented this from Brakeys Tutorial for Tower Defense
-    // As a try to fix the preious unresponsive one 
+    // As a try to fix the previous unresponsive one 
     public Slider btSlider;
     public Image fill;
 

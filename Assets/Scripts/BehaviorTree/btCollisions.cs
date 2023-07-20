@@ -32,6 +32,7 @@ public class BTCollisions : MonoBehaviour
         if (health <= 0)
         {
             GetDestroyed();
+            PStats.money += 5;
         }
     }
 

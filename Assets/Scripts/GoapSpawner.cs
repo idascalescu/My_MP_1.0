@@ -6,6 +6,7 @@ using UnityEngine;
 public class GoapSpawner : MonoBehaviour
 {
     public GameObject goapPrefab;
+    public GameObject secondGoapPrefab;
     public int numberGoapEnemies;
 
     [SerializeField]
@@ -15,9 +16,16 @@ public class GoapSpawner : MonoBehaviour
     [SerializeField]
     private float sHeightSpawning;
 
-    void Start()
+    public bool firstWaveSpawned;
+
+    private void Awake()
     {
         StartCoroutine(Spawn());
+    }
+
+    void Start()
+    {
+       
     }
 
     /*  private void SpawnGoap()
@@ -29,20 +37,35 @@ public class GoapSpawner : MonoBehaviour
     IEnumerator Spawn()
     {
         Vector3 spawningPos = this.transform.position;
-            
-
+         
         for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times 
         {
             Instantiate(goapPrefab, spawningPos, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
-           /* firstWaveSpawned = true;*/
+            numberGoapEnemies = 10;
         }
 
         yield break;//Toggle this to simplify enemies instantiations
     }
 
-    void Update()
+    IEnumerator SpawnWaveTwo()
     {
-        
+        Vector3 spawningPos = this.transform.position;
+
+        for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times 
+        {
+            Instantiate(secondGoapPrefab, spawningPos, Quaternion.identity);
+            yield return new WaitForSeconds(spawningRate);
+        }
+
+        yield break;
     }
+
+    /*void Update()
+    {
+        if(firstWaveSpawned == true)
+        {
+            SpawnWaveTwo();
+        }
+    }*/
 }

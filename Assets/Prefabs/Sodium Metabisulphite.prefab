@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 6131597093643457915}
   - component: {fileID: 6131597093643457908}
   - component: {fileID: 9023240680952211845}
-  - component: {fileID: 528400625658919860}
+  - component: {fileID: 2746342802826399947}
   m_Layer: 0
   m_Name: BTEnemy
   m_TagString: Enemy
@@ -918,7 +918,7 @@ CapsuleCollider:
   m_Height: 2.6107655
   m_Direction: 1
   m_Center: {x: 0, y: 0.37809348, z: -0.0025720596}
---- !u!114 &528400625658919860
+--- !u!114 &2746342802826399947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c4df6ea424bb604cae1b514bf0caa84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 30
   maxHealth: 100
   healthBarBT: {fileID: 7887455136232720740}
 --- !u!1 &6665140631636431225
