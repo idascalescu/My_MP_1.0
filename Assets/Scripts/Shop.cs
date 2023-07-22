@@ -4,6 +4,7 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public TowerBluePrint standardTower;
+    public TowerBluePrint sTower2;
     //Another type of tower.
 
     BuildManager bldManager;
@@ -18,14 +19,12 @@ public class Shop : MonoBehaviour
         Debug.Log("Standard tower selected...");
         bldManager.SelectTowerToBuild(standardTower);
     }
-    /*public void SelectFTTower()
+    public void SelectFTTower()
     {
-        *//*bldManager.SetTowerToBuild(bldManager.stdTowerPrefab);
-        bldManager.towerToBuild = bldManager.stdTowerPrefab;*//*
-        bldManager.SetTowerToBuild(bldManager.towerToBuild);
+        bldManager.SelectTowerToBuild(sTower2);
     }
 
-    public void PurchaseAnotherTurret()
+   /* public void PurchaseAnotherTurret()
     {
         bldManager.SetTowerToBuild(bldManager.anotherTowerPrefab);
         bldManager.towerToBuild = bldManager.anotherTowerPrefab;

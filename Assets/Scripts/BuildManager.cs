@@ -36,6 +36,7 @@ public class BuildManager : MonoBehaviour
         PStats.money -= towerToBuild.cost;
 
         GameObject tower = Instantiate(towerToBuild.tPrefab, node.GetBuildPos(), Quaternion.identity);
+        GameObject tower2 = Instantiate(towerToBuild.tPrefab2, node.GetBuildPos(), Quaternion.identity);
         node.tower = tower;
 
         Debug.Log("Tower built ! Money left:" + PStats.money);

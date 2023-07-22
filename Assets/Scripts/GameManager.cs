@@ -6,9 +6,10 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static bool WaveisOver;
-
-    public GameObject waveCompleteLevelUI;
+    private void Start()
+    {
+        
+    }
 
     public void Quit()
     {
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel1()
     {
-
+        SceneManager.LoadScene("Level1");
     }
 
     public void LoadLevels()
@@ -38,10 +39,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void WaveFinished()
+    public void Controls()
     {
-        WaveisOver = true; 
-        waveCompleteLevelUI.SetActive(true);
-
+        SceneManager.LoadScene("Controls");
     }
 }
