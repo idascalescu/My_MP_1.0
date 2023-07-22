@@ -11,8 +11,7 @@ public class TDCameraControler : MonoBehaviour//LOW PRIORITY
     private bool isMoving = true;
 
     public float scrollVelocity = 5.3f;
-    public float minY = 10.0f;
-    public float maxY = 81.0f;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +54,7 @@ public class TDCameraControler : MonoBehaviour//LOW PRIORITY
         Vector3 pos = transform.position;
 
         pos.y -= scroll * 900 * scrollVelocity * Time.deltaTime;
-        pos.y = Mathf.Clamp(pos.y, minY, maxY);
+        /*pos.y = Mathf.Clamp(pos.y, minY, maxY);*/
 
         transform.position = pos;
     }

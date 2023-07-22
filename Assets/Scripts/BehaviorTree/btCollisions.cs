@@ -10,6 +10,8 @@ public class BTCollisions : MonoBehaviour
 
     public HealthBarBT healthBarBT;
 
+    GoapSpawner goapSpawner;
+
     private void Start()
     {
         health = maxHealth;
@@ -33,6 +35,7 @@ public class BTCollisions : MonoBehaviour
         {
             GetDestroyed();
             PStats.money += 5;
+            goapSpawner.numberGoapEnemies--;
         }
     }
 

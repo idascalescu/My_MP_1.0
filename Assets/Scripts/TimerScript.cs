@@ -31,6 +31,8 @@ public class TimerScript : MonoBehaviour
     private float flashTimer;
     private float flashDuration = 1.0f;
 
+    public bool thirtySecondsPassed;
+
     private void Start()
     {
         ResetTimer();   
@@ -65,7 +67,7 @@ public class TimerScript : MonoBehaviour
         SetTextDisplay(true);
     }
 
-    private void UpdateTimerDisplay(float time)
+    public void UpdateTimerDisplay(float time)
     {
         float minutes = Mathf.FloorToInt(time / 60);
         float seconds = Mathf.FloorToInt(time % 60);
@@ -75,6 +77,11 @@ public class TimerScript : MonoBehaviour
         secondMinute.text = currentTime[1].ToString();
         firstSecond.text = currentTime[2].ToString();
         secondSecond.text = currentTime[3].ToString();
+
+        if (currentTime[3] == 30)
+        {
+            thirtySecondsPassed = true;
+        }
     }
 
     private void Flash()
