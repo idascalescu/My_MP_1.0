@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    public TowerBluePrint standardTower;
+    public TowerBluePrint sTower1;
     public TowerBluePrint sTower2;
+    public TowerBluePrint sTower3;
     //Another type of tower.
 
     BuildManager bldManager;
@@ -14,19 +15,18 @@ public class Shop : MonoBehaviour
         bldManager = BuildManager.instance;
     }
 
-    public void SelectSTDTower()
+    public void SelectBasicTower()
     {
         Debug.Log("Standard tower selected...");
-        bldManager.SelectTowerToBuild(standardTower);
+        bldManager.SelectTowerToBuild(sTower1);
     }
-    public void SelectFTTower()
+    public void SelectFastAtackSpeedTower()
     {
         bldManager.SelectTowerToBuild(sTower2);
     }
 
-   /* public void PurchaseAnotherTurret()
+    public void SlowTowerSelect()
     {
-        bldManager.SetTowerToBuild(bldManager.anotherTowerPrefab);
-        bldManager.towerToBuild = bldManager.anotherTowerPrefab;
-    } // HIGH PRIORITY*/
+        bldManager.SelectTowerToBuild(sTower3);
+    }
 }

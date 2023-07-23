@@ -17,13 +17,13 @@ public class HealthBarBT : MonoBehaviour
     public Slider btSlider;
     public Image fill;
 
-    public void SetMaxHealthBT(int health)
+    public void SetMaxHealthBT(float health)
     {
         btSlider.maxValue = health;
         btSlider.value = health;
     }
 
-    public void SetHealthBT(int health)
+    public void SetHealthBT(float health)
     {
         btSlider.value = health;
     }

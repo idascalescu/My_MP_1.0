@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b92d3a5d325322f49bf7c349834f4921, type: 2}
+  - {fileID: 2100000, guid: 9cf920f531f4b1c42b0f30961cca0c10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -146,7 +146,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 55c0af7a9c903a84d92b57b2499eb388, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 9030946538753509202}
   - component: {fileID: 9030946538753509203}
   m_Layer: 0
-  m_Name: Tower 2.0
+  m_Name: Tower 3.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d3496df1ca59e8048bc8993d275a043a, type: 2}
+  - {fileID: 2100000, guid: 371f4047466c61f4591180359a3ce613, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -267,12 +267,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   towerOffsetRot: 90
-  towerRange: 5.05
-  fireRate: 3
+  towerRange: 4.76
+  fireRate: 1.26
   enemyTag: Enemy
   partToRotate: {fileID: 9030946537480665142}
   turningSpeed: 9
-  bulletPrefab: {fileID: 6558075026057902657, guid: e0923e11a22a0f2439e6d296b3afca01, type: 3}
+  bulletPrefab: {fileID: 8441603582658982479, guid: 6d7a25cdcb949e94fb98bcbd499d77b9, type: 3}
   firePoint: {fileID: 9030946538774903032}
 --- !u!1 &9030946538774903033
 GameObject:

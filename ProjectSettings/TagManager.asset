@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Bullet
   - PauseMenu
+  - SlowingBullet
+  - FastBulletPrefab
   layers:
   - Default
   - TransparentFX

@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private void Start()
-    {
-        
-    }
-
     public void Quit()
     {
         Application.Quit();
@@ -44,3 +40,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Controls");
     }
 }
+// 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndingCollisions : MonoBehaviour
 {
@@ -27,9 +28,16 @@ public class EndingCollisions : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        
         currentHP -= 10;
         healthBar.SetHealth(currentHP);
+    }
+
+    private void Update()
+    {
+        if(currentHP <= 0)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
 //https://www.youtube.com/watch?v=BLfNP4Sc_iA tutorial for HP bar 
