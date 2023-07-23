@@ -29,10 +29,13 @@ public class BTSpawner
 
     public GameManager gameManager;
 
+    private Vector3 btOffSet;
+
    /* private bool firstWaveSpawned;*///FOR SPAWNING WAVES
 
     void Start()
     {
+        btOffSet = new Vector3(12.0f, 0.0f, 0.0f);  
         StartCoroutine(Spawn());
         
     }
@@ -52,7 +55,7 @@ public class BTSpawner
 
         for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times 
         {
-            Instantiate(enm, spawningPos, Quaternion.identity);
+            Instantiate(enm, spawningPos + btOffSet, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
         }
         
@@ -67,7 +70,7 @@ public class BTSpawner
         for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times 
         {
             Instantiate(enm2, spawningPos, Quaternion.identity);
-            Debug.Log("WAVE 2 is goin");
+            
             yield return new WaitForSeconds(spawningRate);
         }
 
