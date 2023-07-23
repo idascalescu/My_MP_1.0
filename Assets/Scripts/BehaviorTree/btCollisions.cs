@@ -29,19 +29,19 @@ public class BTCollisions : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            BTTakeDamage(5.0f);
+            BTTakeDamage(3.9f);
             Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.tag == "SlowingBullet")
         {
-            BTTakeDamage(0.5f);
+            BTTakeDamage(0.3f);
             agent.speed = 2.0f;
         }
 
         if (collision.gameObject.tag == "FastBulletPrefab")
         {
-            BTTakeDamage(3.2f);
+            BTTakeDamage(1.2f);
         }
     }
 

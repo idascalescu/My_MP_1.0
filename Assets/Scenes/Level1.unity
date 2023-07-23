@@ -943,10 +943,10 @@ MonoBehaviour:
     cost: 25
   sTower2:
     tPrefab: {fileID: 9030946538753509196, guid: 5d26332a3cc0960428f25df6196f4b00, type: 3}
-    cost: 50
+    cost: 90
   sTower3:
     tPrefab: {fileID: 9030946538753509196, guid: 2b01c054036fae04697e01d05807c770, type: 3}
-    cost: 0
+    cost: 80
 --- !u!1001 &64770424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '50G
+  m_text: '90G
 
 '
   m_isRightToLeft: 0
@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '65G
+  m_text: '80G
 
 '
   m_isRightToLeft: 0
@@ -10016,7 +10016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eb90a693b09f54fbfcd8a59fcb103b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 60
+  startMoney: 50
 --- !u!114 &1171255294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14928,11 +14928,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstGoapPrefab: {fileID: 3094487922947168890, guid: fc895c572e0da6e4786ea89c5f5d3be3, type: 3}
   secondGoapPrefab: {fileID: 3094487922947168890, guid: c9cd582c7ae97c6449681bddf72b293f, type: 3}
+  thirdGoapPrefab: {fileID: 3094487922947168890, guid: 6a880ca43d893bc4fa44e38e5dccffb1, type: 3}
+  fourthGoapPrefab: {fileID: 3094487922947168890, guid: 39256f953e0b19e4a8948b6529ff0ab0, type: 3}
+  fifthGoapPrefab: {fileID: 3094487922947168890, guid: b0364c7e3eb059f49b3e48cd9cd974b3, type: 3}
   numberGoapEnemies: 0
   spawningRate: 3
   heightSpawning: 3
   sHeightSpawning: 3
-  firstWaveSpawned: 1
 --- !u!1001 &1952897395
 PrefabInstance:
   m_ObjectHideFlags: 0

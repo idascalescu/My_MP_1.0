@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 7879933190134351117}
   - component: {fileID: 7879933190134351114}
   m_Layer: 0
-  m_Name: GOAPEnemy
+  m_Name: GOAPEnemyPilot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -268,7 +268,7 @@ MonoBehaviour:
   target: {fileID: 0}
   towerOffsetRot: 90
   towerRange: 6.09
-  fireRate: 1.08
+  fireRate: 1.39
   enemyTag: Enemy
   partToRotate: {fileID: 9030946537480665142}
   turningSpeed: 9
