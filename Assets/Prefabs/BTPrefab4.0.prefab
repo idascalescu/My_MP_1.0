@@ -77,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6131597092302855535, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: m_Name
-      value: BTPrefab2.0
+      value: BTPrefab4.0
       objectReference: {fileID: 0}
     - target: {fileID: 6131597092495825840, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6131597092609644857, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -48.17
+      value: -28.26
       objectReference: {fileID: 0}
     - target: {fileID: 6131597092609644857, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -163,5 +163,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 8.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7702695200371333666, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 371f4047466c61f4591180359a3ce613, type: 2}
+    - target: {fileID: 8207899244552735034, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.137
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185538976160879765, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bdd883a4f434244db3bbd2934e35d22, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}

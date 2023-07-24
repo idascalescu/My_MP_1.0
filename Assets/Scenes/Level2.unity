@@ -946,7 +946,7 @@ MonoBehaviour:
     cost: 90
   sTower3:
     tPrefab: {fileID: 9030946538753509196, guid: 2b01c054036fae04697e01d05807c770, type: 3}
-    cost: 80
+    cost: 0
 --- !u!1001 &64770424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14506,7 +14506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842397687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.04, y: 1.93, z: -20.07}
+  m_LocalPosition: {x: 14.71, y: 1.93, z: -20.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14525,13 +14525,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce2f4069a033534298d8ddb75e5cbd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enm: {fileID: 6703753518958902973, guid: 3e7bbc0cf5d4b584484b04b27648267b, type: 3}
-  enm2: {fileID: 6131597092302855535, guid: 3cebd3509354b2247941e04bc161adfc, type: 3}
-  spawningRate: 6
+  firstBTPrefab: {fileID: 6703753518958902973, guid: 3245f0e4b37ab144388297a83a127557, type: 3}
+  secondBTPrefab: {fileID: 6703753518958902973, guid: 8824bcc6b18793d4a8f6f8c32a449253, type: 3}
+  thirdBTPrefab: {fileID: 6703753518958902973, guid: 1e87ae33c5a21844db3fc288b558bd9b, type: 3}
+  fourthBTPrefab: {fileID: 6703753518958902973, guid: 3a4aad9c6b78d6a4fb653ce05dba5b00, type: 3}
+  fifthBTPrefab: {fileID: 6703753518958902973, guid: 3e7bbc0cf5d4b584484b04b27648267b, type: 3}
+  spawningRate: 2.6
   SpawningPoint: {fileID: 1842397688}
   heightSpawning: -5
   sHeightSpawning: 0
-  gameManager: {fileID: 1171255292}
 --- !u!1 &1863304685
 GameObject:
   m_ObjectHideFlags: 0

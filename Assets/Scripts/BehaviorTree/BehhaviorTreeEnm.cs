@@ -5,7 +5,6 @@ using Unity.VisualScripting;
 public class BehhaviorTreeEnm : Tree
 {
     public UnityEngine.Transform[] btWaypoints;
-
     
     public static float speed = 5.0f;
     public static float fovRange = 6.0f;
@@ -17,7 +16,7 @@ public class BehhaviorTreeEnm : Tree
     {
         _root = new TaskPatrol(transform, btWaypoints);
         return
-            _root;  
+            _root;
     }
 }
 

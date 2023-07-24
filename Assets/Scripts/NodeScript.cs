@@ -19,7 +19,7 @@ public class NodeScript : MonoBehaviour
 
     private void Start()
     {
-         myRend = GetComponent<Renderer>();
+        myRend = GetComponent<Renderer>();
         startColor = myRend.material.color;
         buildManager = BuildManager.instance;
         posOffSet = new Vector3(0.0f, .8f, 0.0f);

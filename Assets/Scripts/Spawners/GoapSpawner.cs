@@ -23,14 +23,13 @@ public class GoapSpawner : MonoBehaviour
     private void Awake()
     {
         StartCoroutine(SpawnWaveOne());
-        
     }
 
     IEnumerator SpawnWaveOne()
     {
         Vector3 spawningPos = this.transform.position;
 
-        for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times 
+        for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times
         {
             Instantiate(firstGoapPrefab, spawningPos, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
@@ -86,7 +85,6 @@ public class GoapSpawner : MonoBehaviour
         }
         yield break;
     }
-
 }
 //https://stackoverflow.com/questions/50424041/wait-until-coroutine-finishes-before-starting-another-coroutine-unity-c#:~:text=1%20Answer,-Sorted%20by%3A&text=If%20you%20want%20to%20wait,the%20rest%20of%20the%20code.
 // This was the way I made the waves to work . It's not the best but it works 

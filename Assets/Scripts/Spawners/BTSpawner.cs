@@ -10,10 +10,19 @@ public class BTSpawner
 
 {
     [SerializeField]
-    private GameObject enm;
+    private GameObject firstBTPrefab;
 
     [SerializeField]
-    private GameObject enm2;
+    private GameObject secondBTPrefab;
+
+    [SerializeField]
+    private GameObject thirdBTPrefab;
+
+    [SerializeField]
+    private GameObject fourthBTPrefab;
+
+    [SerializeField]
+    private GameObject fifthBTPrefab;
 
     [SerializeField]
     private float spawningRate;
@@ -27,39 +36,26 @@ public class BTSpawner
     [SerializeField]
     private float sHeightSpawning;
 
-    public GameManager gameManager;
-
     private Vector3 btOffSet;
-
-   /* private bool firstWaveSpawned;*///FOR SPAWNING WAVES
 
     void Start()
     {
-        btOffSet = new Vector3(12.0f, 0.0f, 0.0f);  
-        StartCoroutine(Spawn());
-        
+        btOffSet = new Vector3(15.0f, 0.0f, 0.0f);
+        StartCoroutine(SpawnWaveOne());
     }
 
-    private void Update()
-    {
-       /* if (firstWaveSpawned != false)
-        {
-            StartCoroutine(SpawnWaveTwo());
-        }*/
-    }
-
-    IEnumerator Spawn()
+    IEnumerator SpawnWaveOne()
     {
         Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
             heightSpawning, sHeightSpawning);
 
         for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times 
         {
-            Instantiate(enm, spawningPos + btOffSet, Quaternion.identity);
+            Instantiate(firstBTPrefab, spawningPos + btOffSet, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
         }
         
-        yield break;//Toggle this to simplify enemies instantiations
+        yield return SpawnWaveTwo();//Toggle this to simplify enemies instantiations
     }
 
     IEnumerator SpawnWaveTwo()
@@ -69,12 +65,51 @@ public class BTSpawner
 
         for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times 
         {
-            Instantiate(enm2, spawningPos, Quaternion.identity);
+            Instantiate(secondBTPrefab, spawningPos + btOffSet, Quaternion.identity);
             
             yield return new WaitForSeconds(spawningRate);
         }
 
-        yield break;//Toggle this to simplify enemies instantiations
+        yield return SpawnWaveThree(); ;//Toggle this to simplify enemies instantiations
+    }
+
+    IEnumerator SpawnWaveThree()
+    {
+        Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
+            heightSpawning, sHeightSpawning);
+
+        for(var i = 0; i< 10;i++)
+        {
+            Instantiate(secondBTPrefab, spawningPos + btOffSet, Quaternion.identity);
+
+            yield return new WaitForSeconds(spawningRate);
+        }
+
+        yield return SpawnWaveFour();
+    }
+
+    IEnumerator SpawnWaveFour()
+    {
+        Vector3 spawningPos = this.transform.position;
+
+        for (var i = 0; i < 15; i++)// basic for loop so it will yeild return x 15 times 
+        {
+            Instantiate(fourthBTPrefab, spawningPos + btOffSet, Quaternion.identity);
+            yield return new WaitForSeconds(spawningRate);
+        }
+        yield return SpawnWaveFive();
+    }
+
+    IEnumerator SpawnWaveFive()
+    {
+        Vector3 spawningPos = this.transform.position;
+
+        for (var i = 0; i < 18; i++)// basic for loop so it will yeild return x 18 times 
+        {
+            Instantiate(fifthBTPrefab, spawningPos + btOffSet, Quaternion.identity);
+            yield return new WaitForSeconds(spawningRate);
+        }
+        yield break;
     }
 }
 //A TOKEN FOR THIS INFORMATION.
