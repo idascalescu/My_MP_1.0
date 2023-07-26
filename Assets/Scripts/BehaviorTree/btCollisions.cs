@@ -22,7 +22,7 @@ public class BTCollisions : MonoBehaviour
         health = maxHealth;
         healthBarBT.SetMaxHealthBT(maxHealth);
         anyEnemy = GameObject.FindGameObjectWithTag("Enemy");
-        agent = GetComponent<NavMeshAgent>();   
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -53,7 +53,7 @@ public class BTCollisions : MonoBehaviour
         {
             GetDestroyed();
             PStats.money += 5;
-            /*goapSpawner.numberGoapEnemies--;*/
+            PStats.enemiesDown += 1;
         }
     }
 
