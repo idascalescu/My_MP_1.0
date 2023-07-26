@@ -6,7 +6,7 @@ public class BehhaviorTreeEnm : Tree
 {
     public UnityEngine.Transform[] btWaypoints;
     
-    public static float speed = 5.0f;
+    public static float speed = 2.6f;
     public static float fovRange = 6.0f;
 
     protected override BTNode SetupTree()

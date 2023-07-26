@@ -90,7 +90,8 @@ public class BTSpawner
 
     IEnumerator SpawnWaveFour()
     {
-        Vector3 spawningPos = this.transform.position;
+        Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
+            heightSpawning, sHeightSpawning);
 
         for (var i = 0; i < 15; i++)// basic for loop so it will yeild return x 15 times 
         {
@@ -102,7 +103,8 @@ public class BTSpawner
 
     IEnumerator SpawnWaveFive()
     {
-        Vector3 spawningPos = this.transform.position;
+        Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
+            heightSpawning, sHeightSpawning);
 
         for (var i = 0; i < 18; i++)// basic for loop so it will yeild return x 18 times 
         {
