@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.SceneManagement;
+
 using UnityEngine.UI;
 
 public class BTCollisions : MonoBehaviour
@@ -19,9 +19,10 @@ public class BTCollisions : MonoBehaviour
     NavMeshAgent agent;
 
     private AudioSource audioSource;
+    public AudioClip coinCollected;
     public AudioClip enemyHit;
 
-    TransitionScript transitionScript;
+    PStats pStats;
     private void Start()
     {
         health = maxHealth;
@@ -31,23 +32,14 @@ public class BTCollisions : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void LateUpdate()
-    {
-        if (PStats.enemiesDown == 2)
-        {
-            TransitionToScene();
-        }
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
             BTTakeDamage(3.9f);
-            Destroy(collision.gameObject);
-            
             audioSource.clip = enemyHit;
             audioSource.Play();
+            Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.tag == "SlowingBullet")
@@ -57,6 +49,7 @@ public class BTCollisions : MonoBehaviour
             
             audioSource.clip = enemyHit;
             audioSource.Play();
+            Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "FastBulletPrefab")
@@ -65,6 +58,7 @@ public class BTCollisions : MonoBehaviour
             
             audioSource.clip = enemyHit;
             audioSource.Play();
+            Destroy(collision.gameObject);
         }
     }
 
@@ -74,29 +68,25 @@ public class BTCollisions : MonoBehaviour
         healthBarBT.SetHealthBT(health);
         if (health <= 0)
         {
+            CoinHasBeenCollected();
             GetDestroyed();
             /*audioSource.clip = coinCollected; audioSource.Play();*/
             PStats.money += 5;
             PStats.enemiesDown += 1;
-            Debug.Log("They#re down..");
         }
     }
 
     public void GetDestroyed()
     {
-        Destroy(gameObject, 1.0f);
+        Destroy(gameObject);
     }
 
-    /*private void CoinHasBeenCollected() // Didn't work :(
+    private void CoinHasBeenCollected() // Didn't work :(
     {
         audioSource.clip = coinCollected;
         Debug.Log("sing for me");
         audioSource.Play();
-    }*/
-
-    public void TransitionToScene()
-    {
-        SceneManager.LoadScene("TransitionScene");
     }
+
 }
 //https://forum.unity.com/threads/cannot-play-a-disabled-audio-source.468084/

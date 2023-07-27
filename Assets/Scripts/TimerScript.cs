@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.Runtime.InteropServices;
 
-public class TimerScript : UnityEngine.MonoBehaviour
+public class TimerScript : MonoBehaviour
 {
     private float timeDuration = 3.0f * 60.0f;
 
@@ -78,10 +78,10 @@ public class TimerScript : UnityEngine.MonoBehaviour
         firstSecond.text = currentTime[2].ToString();
         secondSecond.text = currentTime[3].ToString();
 
-        if (currentTime[3] == 30)
+        /*if (currentTime[3] == 30)
         {
             thirtySecondsPassed = true;
-        }
+        }*/ //Part of the waves system - Tried to implement that but failed with grace :)
     }
 
     private void Flash()

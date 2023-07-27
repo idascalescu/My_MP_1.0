@@ -64,7 +64,7 @@ public class BTSpawner
         Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
             heightSpawning, sHeightSpawning);
 
-        for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times 
+        for (var i = 0; i < 12; i++)// basic for loop so it will yeild return x 10 times 
         {
             Instantiate(secondBTPrefab, spawningPos + btOffSet, Quaternion.identity);
             
@@ -79,7 +79,7 @@ public class BTSpawner
         Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
             heightSpawning, sHeightSpawning);
 
-        for(var i = 0; i< 10;i++)
+        for(var i = 0; i< 19;i++)
         {
             Instantiate(secondBTPrefab, spawningPos + btOffSet, Quaternion.identity);
 
@@ -94,7 +94,7 @@ public class BTSpawner
         Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
             heightSpawning, sHeightSpawning);
 
-        for (var i = 0; i < 15; i++)// basic for loop so it will yeild return x 15 times 
+        for (var i = 0; i < 28; i++)// basic for loop so it will yeild return x 15 times 
         {
             Instantiate(fourthBTPrefab, spawningPos + btOffSet, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
@@ -107,7 +107,7 @@ public class BTSpawner
         Vector3 spawningPos = new Vector3(Random.Range(0.0f, 0.0f),
             heightSpawning, sHeightSpawning);
 
-        for (var i = 0; i < 18; i++)// basic for loop so it will yeild return x 18 times 
+        for (var i = 0; i < 15; i++)// basic for loop so it will yeild return x 18 times 
         {
             Instantiate(fifthBTPrefab, spawningPos + btOffSet, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);

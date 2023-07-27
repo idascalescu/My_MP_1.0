@@ -7,14 +7,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1310200500060291972, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.31399
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310200500060291972, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.28250575
+      objectReference: {fileID: 0}
     - target: {fileID: 2746342802826399947, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: enemyHit
       value: 
       objectReference: {fileID: 8300000, guid: a612048c06f4e83459c4b60f62dc3e1b, type: 3}
     - target: {fileID: 2746342802826399947, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746342802826399947, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: coinCollected
       value: 
       objectReference: {fileID: 8300000, guid: ef75f4962025c0c4aa872d0e9ad87149, type: 3}
+    - target: {fileID: 3191732527002957429, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 40.9813
+      objectReference: {fileID: 0}
     - target: {fileID: 3307464726698354900, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -38,6 +54,10 @@ PrefabInstance:
     - target: {fileID: 3407265471455077101, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652847162756053453, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
+      propertyPath: m_Center.x
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6131597092302855528, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: m_RootOrder
@@ -175,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 371f4047466c61f4591180359a3ce613, type: 2}
+    - target: {fileID: 8012673208611041274, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 25.802572
+      objectReference: {fileID: 0}
     - target: {fileID: 8207899244552735034, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2.137
