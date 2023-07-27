@@ -4,7 +4,7 @@ using System.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class HealthBar : UnityEngine.MonoBehaviour
 {
     public Slider slider;
     public Image fill;

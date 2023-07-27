@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.Runtime.InteropServices;
 
-public class TimerScript : MonoBehaviour
+public class TimerScript : UnityEngine.MonoBehaviour
 {
     private float timeDuration = 3.0f * 60.0f;
 

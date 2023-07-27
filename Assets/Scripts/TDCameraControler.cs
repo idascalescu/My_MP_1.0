@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TDCameraControler : MonoBehaviour//LOW PRIORITY
+public class TDCameraControler : UnityEngine.MonoBehaviour//LOW PRIORITY
 {
     public float flatMovementSpeed = 28.0f;
     public float flatMovementThickness = 10.0f;

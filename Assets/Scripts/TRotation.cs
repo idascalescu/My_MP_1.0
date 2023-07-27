@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TRotation : MonoBehaviour
+public class TRotation : UnityEngine.MonoBehaviour
 {
     [SerializeField]
     private float rotSpeed;

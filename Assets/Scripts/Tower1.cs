@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower1 : MonoBehaviour
+public class Tower1 : UnityEngine.MonoBehaviour
 {
     [SerializeField]
     private Transform target;
@@ -31,7 +31,7 @@ public class Tower1 : MonoBehaviour
         //Invoke that method = last variable is seconds
     }
 
-    void UpdateTarget()
+    void UpdateTarget()//Follows the target
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag
             (enemyTag);

@@ -6,7 +6,7 @@ using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class BTSpawner
-    : MonoBehaviour
+    : UnityEngine.MonoBehaviour
 
 {
     [SerializeField]
@@ -53,6 +53,7 @@ public class BTSpawner
         {
             Instantiate(firstBTPrefab, spawningPos + btOffSet, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
+            this.GetComponent<AudioSource>();
         }
         
         yield return SpawnWaveTwo();//Toggle this to simplify enemies instantiations

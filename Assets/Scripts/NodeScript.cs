@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class NodeScript : MonoBehaviour
+public class NodeScript : UnityEngine.MonoBehaviour
 {
     public Color hoverColor;
     public Color toLessMoneyColor;

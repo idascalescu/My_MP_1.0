@@ -1,12 +1,12 @@
 
 using UnityEngine;
 
-public class FibresMisles : MonoBehaviour
+public class FibresMisles : UnityEngine.MonoBehaviour
 {
     [SerializeField]
     private Transform target;
 
-    public float speed = 50.0f;
+    public float speed = 33.0f;
 
     public void Seek(Transform _target)
     {
@@ -41,7 +41,7 @@ public class FibresMisles : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("IMPACT -10");  
+            /*Debug.Log("IMPACT -10");*/  
         }
     }
 }

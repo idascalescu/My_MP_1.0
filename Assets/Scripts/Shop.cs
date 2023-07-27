@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class Shop : MonoBehaviour
+public class Shop : UnityEngine.MonoBehaviour
 {
     public TowerBluePrint sTower1;
     public TowerBluePrint sTower2;

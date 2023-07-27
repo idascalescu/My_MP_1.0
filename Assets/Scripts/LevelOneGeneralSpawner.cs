@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class LevelOneGeneralSpawner : MonoBehaviour
+public class LevelOneGeneralSpawner : UnityEngine.MonoBehaviour
 {
     [SerializeField]
     private GameObject[] enemyPrefabs;

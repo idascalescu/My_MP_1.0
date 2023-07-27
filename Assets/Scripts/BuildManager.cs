@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class BuildManager : MonoBehaviour
+public class BuildManager : UnityEngine.MonoBehaviour
 {
     public static BuildManager instance;
 

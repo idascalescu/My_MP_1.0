@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pause : MonoBehaviour
+public class Pause : UnityEngine.MonoBehaviour
 {
     public GameObject ui;
 

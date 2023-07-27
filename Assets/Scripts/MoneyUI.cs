@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class MoneyUI : MonoBehaviour
+public class MoneyUI : UnityEngine.MonoBehaviour
 {
     public TextMeshProUGUI moneyText;
     // Start is called before the first frame update

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoapSpawner : MonoBehaviour
+public class GoapSpawner : UnityEngine.MonoBehaviour
 {
     public GameObject firstGoapPrefab;
     public GameObject secondGoapPrefab;

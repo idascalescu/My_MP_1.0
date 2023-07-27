@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;//ACCESS NAV MESH
 
-public abstract class GAction : MonoBehaviour
+public abstract class GAction : UnityEngine.MonoBehaviour
 {
     public string actionName = "Action";
     public float cost = 1.0f;//Each action will have a cost.

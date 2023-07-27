@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager : UnityEngine.MonoBehaviour
 {
     public void Quit()
     {
