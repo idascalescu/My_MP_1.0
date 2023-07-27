@@ -27,5 +27,5 @@ public class BTGoToFinish : BTNode
         return state;
     }
 }
-//https://www.youtube.com/watch?v=aR6wt5BlE-E&t=629s YOU IDIOT THIS IS FOR BT BT BT !!!!! 
+//https://www.youtube.com/watch?v=aR6wt5BlE-E&t=629s YOU BEAUTIFUL CREATURE, THIS IS FOR BT !!!!! 
 // To implement enemy attacking soon !!!!!!!!!!!!!!

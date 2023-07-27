@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace BehaviorTree
 {
-    public class MySelector : BTNode
+    public class MySelector : BTNode//The selector is sorting the "Leaves"
+                                   //the "Leaves" are the actions made by the NPC
     {
         public MySelector() : base() { }
         public MySelector(List<BTNode> children) : base(children) { }

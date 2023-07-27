@@ -6,12 +6,6 @@ using UnityEngine.UI;
 
 public class HealthBarBT : MonoBehaviour
 {
-    /*[SerializeField] private Slider slider;
-
-    public void UpdateHealthBar(float currentValue, float maxValue)
-    {
-        slider.value = currentValue / maxValue;
-    }*/
     // Implemented this from Brakeys Tutorial for Tower Defense
     // As a try to fix the previous unresponsive one 
     public Slider btSlider;

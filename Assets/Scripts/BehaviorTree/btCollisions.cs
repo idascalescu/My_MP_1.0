@@ -5,7 +5,9 @@ using UnityEngine.AI;
 
 using UnityEngine.UI;
 
-public class BTCollisions : MonoBehaviour
+public class BTCollisions : MonoBehaviour//This is a Double-U-T-F script that has a bit to many functions.
+                                        //It works but must be optimised and splitted in two different scripts
+                                       //Or maybe three.
 {
     public float health;
     public float maxHealth;
@@ -22,7 +24,6 @@ public class BTCollisions : MonoBehaviour
     public AudioClip coinCollected;
     public AudioClip enemyHit;
 
-    PStats pStats;
     private void Start()
     {
         health = maxHealth;
@@ -45,7 +46,7 @@ public class BTCollisions : MonoBehaviour
         if(collision.gameObject.tag == "SlowingBullet")
         {
             BTTakeDamage(0.3f);
-            agent.speed = 2.0f;
+            agent.speed = 3.3f;
             
             audioSource.clip = enemyHit;
             audioSource.Play();
@@ -68,11 +69,11 @@ public class BTCollisions : MonoBehaviour
         healthBarBT.SetHealthBT(health);
         if (health <= 0)
         {
-            CoinHasBeenCollected();
+            /*CoinHasBeenCollected();*/
             GetDestroyed();
             /*audioSource.clip = coinCollected; audioSource.Play();*/
             PStats.money += 5;
-            PStats.enemiesDown += 1;
+            /*PStats.enemiesDown += 1;*/
         }
     }
 
@@ -81,12 +82,12 @@ public class BTCollisions : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void CoinHasBeenCollected() // Didn't work :(
+    /*private void CoinHasBeenCollected() // Didn't work :( :/ :| \: ):
     {
         audioSource.clip = coinCollected;
         Debug.Log("sing for me");
         audioSource.Play();
-    }
+    }*/
 
 }
 //https://forum.unity.com/threads/cannot-play-a-disabled-audio-source.468084/

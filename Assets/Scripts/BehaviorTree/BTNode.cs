@@ -42,7 +42,9 @@ namespace BehaviorTree
             children.Add(node);
         }
 
-        public virtual NodeState Evaluate() => NodeState.FAILURE;
+        public virtual NodeState Evaluate() => NodeState.FAILURE;//Node system
+                                                                //Part of behaviour tree
+                                                               //This will sort the task for the NPC
 
         public void SetData(string heal, object value)
         {

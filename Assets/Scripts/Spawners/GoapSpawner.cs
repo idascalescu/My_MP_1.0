@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoapSpawner : UnityEngine.MonoBehaviour
+public class GoapSpawner : MonoBehaviour
 {
     public GameObject firstGoapPrefab;
     public GameObject secondGoapPrefab;
@@ -42,7 +42,7 @@ public class GoapSpawner : UnityEngine.MonoBehaviour
     {
         Vector3 spawningPos = this.transform.position;
 
-        for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times 
+        for (var i = 0; i < 15; i++)// basic for loop so it will yeild return x 10 times 
         {
             Instantiate(secondGoapPrefab, spawningPos, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
@@ -54,7 +54,7 @@ public class GoapSpawner : UnityEngine.MonoBehaviour
     {
         Vector3 spawningPos = this.transform.position;
 
-        for (var i = 0; i < 10; i++)// basic for loop so it will yeild return x 10 times 
+        for (var i = 0; i < 18; i++)// basic for loop so it will yeild return x 10 times 
         {
             Instantiate(thirdGoapPrefab, spawningPos, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);
@@ -66,7 +66,7 @@ public class GoapSpawner : UnityEngine.MonoBehaviour
     {
         Vector3 spawningPos = this.transform.position;
 
-        for (var i = 0; i < 15; i++)// basic for loop so it will yeild return x 15 times 
+        for (var i = 0; i < 21; i++)// basic for loop so it will yeild return x 15 times 
         {
             Instantiate(fourthGoapPrefab, spawningPos, Quaternion.identity);
             yield return new WaitForSeconds(spawningRate);

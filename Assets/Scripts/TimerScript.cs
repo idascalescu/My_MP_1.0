@@ -6,13 +6,13 @@ using System.Runtime.InteropServices;
 
 public class TimerScript : MonoBehaviour
 {
-    private float timeDuration = 3.0f * 60.0f;
+    private float timeDuration = 5.0f * 60.0f;
 
     [SerializeField]
     private bool countDown = true;
 
     private float timer;
-
+    //***********************************
     [SerializeField]
     private TextMeshProUGUI firstMinute;
 
@@ -27,11 +27,9 @@ public class TimerScript : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI secondSecond;
-
+    //************************************
     private float flashTimer;
     private float flashDuration = 1.0f;
-
-    public bool thirtySecondsPassed;
 
     private void Start()
     {
@@ -77,11 +75,6 @@ public class TimerScript : MonoBehaviour
         secondMinute.text = currentTime[1].ToString();
         firstSecond.text = currentTime[2].ToString();
         secondSecond.text = currentTime[3].ToString();
-
-        /*if (currentTime[3] == 30)
-        {
-            thirtySecondsPassed = true;
-        }*/ //Part of the waves system - Tried to implement that but failed with grace :)
     }
 
     private void Flash()

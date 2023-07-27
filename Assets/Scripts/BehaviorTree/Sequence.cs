@@ -12,7 +12,7 @@ namespace BehaviorTree
 
             foreach (BTNode node in children)
             {
-                switch (node.Evaluate())
+                switch (node.Evaluate())//LEAVES
                 {
                     case NodeState.FAILURE:
                         state = NodeState.FAILURE;
@@ -21,7 +21,7 @@ namespace BehaviorTree
                         continue;
                     case NodeState.WALKING:
                         anyChildIsRunning = true;
-                            continue;
+                            continue; 
                     default:
                         state = NodeState.SUCCESS;
                             return state;

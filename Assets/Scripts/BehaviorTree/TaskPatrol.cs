@@ -4,7 +4,7 @@ using UnityEngine;
 
 using BehaviorTree;
 
-public class TaskPatrol : BTNode
+public class TaskPatrol : BTNode//Main task - Patrol - For this project - Walking until reaching the finish
 {
     private Transform _transform;
     private Transform[] _waypoints;
@@ -50,7 +50,7 @@ public class TaskPatrol : BTNode
             }
         }
 
-        state = NodeState.WALKING;
+        state = NodeState.WALKING;//One of the leaves
         return state;
     }
 }

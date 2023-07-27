@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
 
-public class CheckHealPlaceInRange : BTNode
+public class CheckHealPlaceInRange : BTNode//Part of behaviour tree system
 {
     private static int _enemyLayerMask = 1 << 6;
 
