@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 using UnityEngine.UI;
 
-public class BTCollisions : MonoBehaviour//This is a Double-U-T-F script that has a bit to many functions.
-                                        //It works but must be optimised and splitted in two different scripts
-                                       //Or maybe three.
+public class BTCollisions : MonoBehaviour//This is a Double-U-T-F script that has a bit of to many functions. . .
+                                        //It works, but must be optimised and splitted in two different scripts
+                                       //Or maybe three. . .
 {
     public float health;
     public float maxHealth;
