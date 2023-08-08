@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 using UnityEngine.UI;
 
-public class BTCollisions : MonoBehaviour//This is a Double-U-T-F script that has a bit of to many functions. . .
+public class BTCollisions : MonoBehaviour//This scriptthas a bit of to many functions. . .
                                         //It works, but must be optimised and splitted in two different scripts
                                        //Or maybe three. . .
 {
@@ -23,6 +23,8 @@ public class BTCollisions : MonoBehaviour//This is a Double-U-T-F script that ha
     private AudioSource audioSource;
     public AudioClip coinCollected;
     public AudioClip enemyHit;
+
+    public static int destroyedEnemies;
 
     private void Start()
     {
@@ -71,6 +73,7 @@ public class BTCollisions : MonoBehaviour//This is a Double-U-T-F script that ha
         {
             /*CoinHasBeenCollected();*/
             GetDestroyed();
+            destroyedEnemies += 1;
             /*audioSource.clip = coinCollected; audioSource.Play();*/
             PStats.money += 5;
             /*PStats.enemiesDown += 1;*/

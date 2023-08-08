@@ -39,5 +39,15 @@ public class GameManager : UnityEngine.MonoBehaviour
     {
         SceneManager.LoadScene("Controls");
     }
+
+    public void LoadTransLevel1()
+    {
+        SceneManager.LoadScene("TransitionSceneLevel1");
+    }
+
+    public void LoadTransLevel2()
+    {
+        SceneManager.LoadScene("TransitionSceneLevel2");
+    }
 }
 // 

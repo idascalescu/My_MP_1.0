@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class EndingCollisions : UnityEngine.MonoBehaviour
+public class EndingCollisions : MonoBehaviour
 {
     public int maxHP = 0;
     public int currentHP;
