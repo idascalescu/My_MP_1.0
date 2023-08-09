@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 320
+  maxHealth: 360
   healthBarBT: {fileID: 1338631111153305184}
   coinCollected: {fileID: 8300000, guid: ef75f4962025c0c4aa872d0e9ad87149, type: 3}
   enemyHit: {fileID: 8300000, guid: a612048c06f4e83459c4b60f62dc3e1b, type: 3}

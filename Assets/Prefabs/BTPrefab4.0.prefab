@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: a612048c06f4e83459c4b60f62dc3e1b, type: 3}
     - target: {fileID: 2746342802826399947, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: maxHealth
-      value: 200
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 2746342802826399947, guid: 9ecc01124e97a4d4f8662aa09471a38d, type: 3}
       propertyPath: coinCollected

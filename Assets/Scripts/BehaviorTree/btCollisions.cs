@@ -15,6 +15,7 @@ public class BTCollisions : MonoBehaviour//This scriptthas a bit of to many func
     public HealthBarBT healthBarBT;
 
     GoapSpawner goapSpawner;
+    MoneyUI moneyUI;
 
     private GameObject anyEnemy;
 
@@ -23,8 +24,6 @@ public class BTCollisions : MonoBehaviour//This scriptthas a bit of to many func
     private AudioSource audioSource;
     public AudioClip coinCollected;
     public AudioClip enemyHit;
-
-    public static int destroyedEnemies;
 
     private void Start()
     {
@@ -58,7 +57,6 @@ public class BTCollisions : MonoBehaviour//This scriptthas a bit of to many func
         if (collision.gameObject.tag == "FastBulletPrefab")
         {
             BTTakeDamage(1.2f);
-            
             audioSource.clip = enemyHit;
             audioSource.Play();
             Destroy(collision.gameObject);
@@ -71,12 +69,9 @@ public class BTCollisions : MonoBehaviour//This scriptthas a bit of to many func
         healthBarBT.SetHealthBT(health);
         if (health <= 0)
         {
-            /*CoinHasBeenCollected();*/
             GetDestroyed();
-            destroyedEnemies += 1;
-            /*audioSource.clip = coinCollected; audioSource.Play();*/
             PStats.money += 5;
-            /*PStats.enemiesDown += 1;*/
+            MoneyUI.enemiesDown++;
         }
     }
 
@@ -84,13 +79,5 @@ public class BTCollisions : MonoBehaviour//This scriptthas a bit of to many func
     {
         Destroy(gameObject);
     }
-
-    /*private void CoinHasBeenCollected() // Didn't work :( :/ :| \: ):
-    {
-        audioSource.clip = coinCollected;
-        Debug.Log("sing for me");
-        audioSource.Play();
-    }*/
-
 }
 //https://forum.unity.com/threads/cannot-play-a-disabled-audio-source.468084/
